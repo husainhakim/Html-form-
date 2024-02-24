@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+        body {
+            background-color:  #300000;
+            color: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120vh;
+            margin: 0;
+        }
+
+        section {
+            width: 30%;
+            background-color: black;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 100px pink;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 96%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #32c737;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #cf4137;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+            
+<img src="/images/itmlogo.webp" align="right">
+<h1>ID Card Form</h1>
+            First Name:
+            <input type="text" placeholder="Eg.Areeb"  required>
+             Last Name:
+            <input type="text" placeholder="Eg.Shah" required>
+Photo:
+<input type="file">
+
+            <label for="rollNo">Roll no.:</label>
+            <input type="number" placeholder="Eg.27" required>
+
+            Batch:
+<fieldset> 
+            <input type="radio"  name="batch" value="2023-2027"> 2023-2027 
+            <input type="radio" name="batch" value="2024-2028">2024-2028 
+            <input type="radio" name="batch" value="2025-2029">2025-2029
+        </fieldset>
+           Program:
+            <input list="Program" name="program" id="program" required>
+            <datalist id="Program">
+                <option value="Btech CSE">
+                <option value="PGDM">
+                <option value="MBA">
+            </datalist>
+            
+            Address:
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+
+            Blood group:
+            <input list="Bloodgroup" name="bloodGroup" id="bloodGroup" required>
+            <datalist id="Bloodgroup">
+                <option value="A+ve">
+                <option value="A-ve">
+                <option value="AB+ve">
+                <option value="B+ve">
+                <option value="B-ve">
+                <option value="O+ve">
+                    <option value="O+ve"></option>
+            </datalist>
+         
+            Date of birth:
+            <input type="date" id="bday" name="bday" required>
+
+            Emergency contact name:
+            <input type="text" placeholder="Eg.Contactname(Eg.Sanjay)-Relation(Eg.father)" required>
+
+            Emergency contact number:
+            <input type="tel" id="emergencyContactNumber" placeholder="Enter a 10-digit number" name="emergencyContactNumber" required>
+            <input type="checkbox" >By tapping on this button you agree to terms and conditions for the college admissions
+            <button type="submit" required>Submit</button>
+            <button type="reset">Reset</button>
+        
+        </form>
+    </section>
+</body>
+</html>
